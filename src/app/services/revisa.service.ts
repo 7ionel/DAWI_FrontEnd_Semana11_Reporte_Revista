@@ -88,7 +88,7 @@ export class RevistaService {
 
     return this.http.post(baseUrlConsultaRevista +"/reporteRevistaExcel?nombre="+nom+"&frecuencia="+fre+"&fecDesde="+desde+"&fecHasta="+hasta+"&estado="+est+"&idPais="+p+"&idTipo="+t,'', requestOptions).pipe(map((response)=>{
       return {
-          filename: 'reporteExcel20232.xlsx',
+          filename: 'ReporteRevista.xlsx',
           data: new Blob([response], {type: 'application/vnd.ms-excel'})
       };
   }));
