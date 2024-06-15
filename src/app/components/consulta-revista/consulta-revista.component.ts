@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppMaterialModule } from '../../app.material.module';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from '../../menu/menu.component';
 import { MatPaginator } from '@angular/material/paginator';
@@ -8,10 +6,12 @@ import { UtilService } from '../../services/util.service';
 import { Pais } from '../../models/pais.model';
 import { DataCatalogo } from '../../models/dataCatalogo.model';
 import { RevistaService } from '../../services/revisa.service';
+import { Component, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
-  imports: [AppMaterialModule, FormsModule, CommonModule, MenuComponent],
+  imports: [AppMaterialModule, FormsModule , CommonModule, MenuComponent],
   selector: 'app-consulta-revista',
   templateUrl: './consulta-revista.component.html',
   styleUrls: ['./consulta-revista.component.css']
@@ -37,7 +37,7 @@ export class ConsultaRevistaComponent {
       varNombre: string = "";
       varFrecuencia: string = "";
       varEstado: boolean = false;
-      varFechaCreacionDesde: Date = new Date();
+      varFechaCreacionDesde: Date = new Date(1990,0,1);
       varFechaCreacionHasta: Date = new Date();
       varIdPais: number = -1;
       varIdTipo: number = -1;
